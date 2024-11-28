@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Tarea</title>
+    <link rel="stylesheet" href="tarea.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2><i class="fas fa-tasks"></i> Nueva Tarea</h2>
+        <form action="/modelado/tarea.php" method="post">
+            <div class="form-group">
+                <label for="nombre"><i class="fas fa-clipboard"></i></label>
+                <input type="text" id="nombre" name="nombre" placeholder="Escribe el nombre de la tarea" required>
+            </div>
+            <div class="form-group">
+                <label for="descripcion"><i class="fas fa-align-left"></i></label>
+                <textarea id="descripcion" name="descripcion" rows="3" placeholder="Describe la tarea" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="fecha_inicio"><i class="fas fa-calendar-alt"></i></label>
+                <input type="date" id="fecha_inicio" name="fecha_inicio" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha_vencimiento"><i class="fas fa-calendar-alt"></i></label>
+                <input type="date" id="fecha_vencimiento" name="fecha_vencimiento" required>
+            </div>
+            <div class="form-group">
+                <label for="estado"><i class="fas fa-info-circle"></i></label>
+                <select id="estado" name="estado">
+                    <option value="" disabled selected>Elige una estado</option>
+                    <option value="Pendiente">Pendiente</option>
+                    <option value="En progreso">En progreso</option>
+                    <option value="Completada">Completada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="encargado"><i class="fas fa-align-left"></i> </label>
+                <input id="encargado" name="encargado"  placeholder="Encargado" required></input>
+            </div>
+            <div class="button-group">
+                <button type="submit" class="btn-submit"><i class="fas fa-save"></i> Guardar Tarea</button>
+                <a class="btn-submit1" href="/vistas/tablas/tareas.php"><i class="fas fa-times"></i> Cancelar</a>
+            </div>            
+        </form> 
+    </div>
+</body>
+</html>
